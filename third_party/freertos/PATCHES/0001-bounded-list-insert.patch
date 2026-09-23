@@ -1,0 +1,69 @@
+diff --git a/third_party/freertos/list.c b/third_party/freertos/list.c
+index 6227106..cb03267 100644
+--- a/third_party/freertos/list.c
++++ b/third_party/freertos/list.c
+@@ -244,3 +244,64 @@ UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove )
+     return pxList->uxNumberOfItems;
+ }
+ /*-----------------------------------------------------------*/
++
++/* ===========================================================================
++ * BOMWERK-NIGHTMARE LOCAL MODIFICATION - not upstream FreeRTOS.
++ *
++ * Everything ABOVE this banner is byte-verbatim FreeRTOS-Kernel V11.1.0 at
++ * commit dbf70559b27d. Everything BELOW it was added by this repository and
++ * exists in no FreeRTOS release.
++ *
++ * Recover upstream exactly:
++ *     git apply -R third_party/freertos/PATCHES/0001-bounded-list-insert.patch
++ *
++ * Why this is here: a vendor fork that diverges from upstream while leaving
++ * tskKERNEL_VERSION_NUMBER reading "V11.1.0" is one of the five patterns this
++ * corpus reproduces. No SBOM tool in docs/RESULTS.md detects this divergence -
++ * bomwerk included. See GROUND-TRUTH.md, "Where every tool loses".
++ * ===========================================================================*/
++
++/*
++ * A bounded-latency variant of vListInsert(). Upstream vListInsert() walks the
++ * list until it finds the sorted insertion point, so its worst case is O(n) in
++ * the number of items. This variant walks at most uxMaxTraversal items and
++ * appends at that point instead, trading sort exactness for a hard upper bound
++ * on insertion latency - the kind of change a device vendor makes to satisfy a
++ * timing analysis, and then never contributes back.
++ *
++ * Returns the number of items actually traversed.
++ */
++UBaseType_t uxListInsertBounded( List_t * const pxList,
++                                 ListItem_t * const pxNewListItem,
++                                 UBaseType_t uxMaxTraversal )
++{
++    ListItem_t * pxIterator;
++    UBaseType_t uxTraversed = 0U;
++    const TickType_t xValueOfInsertion = pxNewListItem->xItemValue;
++
++    listTEST_LIST_INTEGRITY( pxList );
++    listTEST_LIST_ITEM_INTEGRITY( pxNewListItem );
++
++    for( pxIterator = ( ListItem_t * ) &( pxList->xListEnd );
++         pxIterator->pxNext->xItemValue <= xValueOfInsertion;
++         pxIterator = pxIterator->pxNext )
++    {
++        if( uxTraversed >= uxMaxTraversal )
++        {
++            break;
++        }
++
++        uxTraversed = ( UBaseType_t ) ( uxTraversed + 1U );
++    }
++
++    pxNewListItem->pxNext = pxIterator->pxNext;
++    pxNewListItem->pxNext->pxPrevious = pxNewListItem;
++    pxNewListItem->pxPrevious = pxIterator;
++    pxIterator->pxNext = pxNewListItem;
++
++    pxNewListItem->pxContainer = pxList;
++    ( pxList->uxNumberOfItems ) = ( UBaseType_t ) ( pxList->uxNumberOfItems + 1U );
++
++    return uxTraversed;
++}
++/*-----------------------------------------------------------*/

@@ -1,0 +1,36 @@
+# Regenerates docs/RESULTS.md and --checks it, so the published comparison table
+# cannot drift unnoticed from what the pinned tool versions actually say. See
+# docs/METHODOLOGY.md.
+
+name: compare
+
+on:
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1"   # weekly, Monday 06:00 UTC - catches a rival tool's own drift
+  workflow_dispatch:
+
+# DORMANT until the comparison is ready to build bomwerk from source in CI. The
+# repository is public, but this job is intentionally disabled while its pinned
+# tool outputs and runtime are being stabilized. Remove the `if:` when enabling it.
+jobs:
+  compare:
+    if: ${{ false }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      - name: Build bomwerk
+        run: |
+          git clone --depth 1 https://github.com/bomwerk/bomwerk.git /tmp/bomwerk-src
+          cmake -S /tmp/bomwerk-src -B /tmp/bomwerk-build -DCMAKE_BUILD_TYPE=Release
+          cmake --build /tmp/bomwerk-build --target bomwerk -j
+
+      - name: Regenerate and check docs/RESULTS.md
+        run: python3 tools/compare_tools.py --bomwerk /tmp/bomwerk-build/bomwerk --check
+
+      - name: On drift, show a fresh render for the PR diff
+        if: failure()
+        run: |
+          python3 tools/compare_tools.py --bomwerk /tmp/bomwerk-build/bomwerk --write
+          git diff -- docs/RESULTS.md

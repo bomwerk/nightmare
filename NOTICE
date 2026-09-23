@@ -1,0 +1,59 @@
+bomwerk nightmare
+Copyright 2026 bomwerk
+
+This repository contains third-party software. Each component below is vendored or
+referenced at a pinned upstream version. The machine-readable record is
+third_party/pins.json, and tools/verify_vendored.sh checks it.
+
+--------------------------------------------------------------------------------
+zlib 1.2.11 - https://github.com/madler/zlib - commit cacf7f1d4e3d
+License: Zlib
+Vendored under third_party/zlib, unchanged from upstream.
+third_party/zlib/LICENSE was added by us: upstream ships no LICENSE file, so its text
+is copied from the header comment of zlib.h. See third_party/SOURCES.md.
+
+--------------------------------------------------------------------------------
+FreeRTOS-Kernel V11.1.0 - https://github.com/FreeRTOS/FreeRTOS-Kernel - commit dbf70559b27d
+License: MIT
+Vendored under third_party/freertos. One file is changed locally: list.c, described in
+third_party/freertos/PATCHES/0001-bounded-list-insert.patch. Every other file is
+unchanged from upstream. This copy is not upstream FreeRTOS and should not be treated
+as such; the change is intentional and is part of what this corpus tests.
+
+--------------------------------------------------------------------------------
+uthash 2.4.0 - https://github.com/troydhanson/uthash - commit a49bed0b4abb
+License: revised BSD (see third_party/uthash/LICENSE)
+Vendored under third_party/uthash, unchanged from upstream.
+
+--------------------------------------------------------------------------------
+stb - https://github.com/nothings/stb - commit 2c980bb59875
+License: MIT or Unlicense, at your option
+Vendored under third_party/stb, unchanged from upstream. Present but never compiled,
+never included and not used by any build target, on purpose.
+
+--------------------------------------------------------------------------------
+SQLite 3.41.2 - https://www.sqlite.org/2023/sqlite-amalgamation-3410200.zip
+Zip sha256 01df06a84803c1ab4d62c64e995b151b2dbcf5dbc93bbc5eee213cb18225d987
+License: public domain
+Vendored under third_party/sqlite-prebuilt: sqlite3.h unchanged from the release zip,
+and lib/libsqlite3.a compiled by us from the same zip (see tools/build_prebuilt.sh).
+
+--------------------------------------------------------------------------------
+cJSON 1.7.15 - https://github.com/DaveGamble/cJSON - commit d348621ca935
+License: MIT (see third_party/cjson-prebuilt/LICENSE)
+Vendored under third_party/cjson-prebuilt: cJSON.h and LICENSE unchanged from upstream,
+and lib/libcjson.a compiled by us from cJSON.c at the same commit (see
+tools/build_prebuilt.sh).
+
+--------------------------------------------------------------------------------
+OpenSSL 3.0.7 - https://github.com/openssl/openssl - commit 19cc035b6c6f
+License: Apache-2.0
+Not vendored. Referenced as a git submodule at third_party/openssl. No OpenSSL source
+is distributed in this repository.
+
+--------------------------------------------------------------------------------
+tinyxml2 9.0.0 - https://github.com/leethomason/tinyxml2 - commit 1dee28e51f91
+License: Zlib
+Not vendored. Declared with CMake FetchContent in CMakeLists.txt and downloaded only
+when building with -DNIGHTMARE_ENABLE_XML=ON. No tinyxml2 source is distributed in this
+repository.

@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": { "major": 3, "minor": 22, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "config-a",
+      "displayName": "config-a - shipping firmware (zlib + uthash)",
+      "description": "Links the vendored zlib 1.2.11, CVEs and all, and reaches uthash by include path only. FreeRTOS and stb are in the tree and in neither the objects nor the binary.",
+      "binaryDir": "${sourceDir}/build/config-a",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "NIGHTMARE_ENABLE_COMPRESSION": "ON",
+        "NIGHTMARE_ENABLE_RTOS_SHIM": "OFF"
+      }
+    },
+    {
+      "name": "config-b",
+      "displayName": "config-b - lab build (forked FreeRTOS)",
+      "description": "Links the forked FreeRTOS list.c, including uxListInsertBounded which exists in no FreeRTOS release. zlib, uthash and stb are in the tree and in neither the objects nor the binary.",
+      "binaryDir": "${sourceDir}/build/config-b",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "NIGHTMARE_ENABLE_COMPRESSION": "OFF",
+        "NIGHTMARE_ENABLE_RTOS_SHIM": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "config-a", "configurePreset": "config-a" },
+    { "name": "config-b", "configurePreset": "config-b" }
+  ]
+}

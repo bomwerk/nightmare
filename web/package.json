@@ -1,0 +1,14 @@
+{
+  "name": "nightmare-web-console",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A tiny web console shipped alongside the firmware. Exists so this corpus is not C/C++-only: the npm leg is where syft and cdxgen are expected to match or beat bomwerk, and docs/RESULTS.md says so.",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "debug": "4.3.4",
+    "ms": "2.1.3"
+  },
+  "devDependencies": {
+    "rimraf": "5.0.5"
+  }
+}

@@ -1,0 +1,19 @@
+# Conan declarations for this firmware.
+#
+# The zlib version declared here is
+# 1.3.1, and the zlib the compiler actually builds is the vendored 1.2.11 under
+# third_party/zlib. That disagreement is deliberate and is the single most important
+# row in docs/RESULTS.md - a tool that reports only this file reports a version that
+# is in no binary, and reports it as clean. See GROUND-TRUTH.md rows 1 and 2.
+#
+# libcurl is declared and never used at all: it is not vendored, not compiled and not
+# linked in either configuration. A usage analysis has no location for it in the tree,
+# so the correct verdict is "not judged, kept" rather than UNUSED.
+
+[requires]
+zlib/1.3.1
+libcurl/8.5.0
+
+[generators]
+CMakeDeps
+CMakeToolchain

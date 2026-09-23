@@ -1,0 +1,791 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "4694c1d0-f3c7-5799-b9e4-46dede529c0f",
+      "cpe": "cpe:2.3:a:*:libcurl:8.5.0:*:*:*:*:*:*:*",
+      "name": "libcurl",
+      "properties": [
+        {
+          "name": "bomwerk:match-coverage",
+          "value": "unmapped-purl-type"
+        }
+      ],
+      "purl": "pkg:conan/libcurl@8.5.0",
+      "type": "library",
+      "version": "8.5.0"
+    },
+    {
+      "bom-ref": "9f59bc00-a066-5171-89b2-0b3bb2bdbbb9",
+      "cpe": "cpe:2.3:a:*:zlib:1.3.1:*:*:*:*:*:*:*",
+      "name": "zlib",
+      "properties": [
+        {
+          "name": "bomwerk:match-coverage",
+          "value": "unmapped-purl-type"
+        }
+      ],
+      "purl": "pkg:conan/zlib@1.3.1",
+      "type": "library",
+      "version": "1.3.1"
+    },
+    {
+      "bom-ref": "50e25f6a-c9b9-5157-a29c-a8b659614845",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "third_party/cjson-prebuilt"
+          }
+        ]
+      },
+      "name": "cjson-prebuilt",
+      "properties": [
+        {
+          "name": "bomwerk:match-coverage",
+          "value": "unversioned-purl"
+        }
+      ],
+      "purl": "pkg:generic/cjson-prebuilt",
+      "type": "library"
+    },
+    {
+      "bom-ref": "603ab5ae-2f71-542b-9fb8-8ceefcde27b3",
+      "cpe": "cpe:2.3:a:*:freertos:v11.1.0:*:*:*:*:*:*:*",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "third_party/freertos"
+          }
+        ]
+      },
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "freertos",
+      "properties": [
+        {
+          "name": "bomwerk:match-coverage",
+          "value": "unmapped-purl-type"
+        }
+      ],
+      "purl": "pkg:generic/freertos@V11.1.0",
+      "type": "library",
+      "version": "V11.1.0"
+    },
+    {
+      "bom-ref": "8ec2adef-d76c-5605-9e5e-46e0e7e1841b",
+      "cpe": "cpe:2.3:a:*:sqlite3:3.41.2:*:*:*:*:*:*:*",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "third_party/sqlite-prebuilt"
+          }
+        ]
+      },
+      "name": "sqlite3",
+      "properties": [
+        {
+          "name": "bomwerk:match-coverage",
+          "value": "unmapped-purl-type"
+        }
+      ],
+      "purl": "pkg:generic/sqlite3@3.41.2",
+      "type": "library",
+      "version": "3.41.2"
+    },
+    {
+      "bom-ref": "164864a2-cf01-58d3-993c-f99ef3cd7441",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "third_party/stb"
+          }
+        ]
+      },
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "stb",
+      "properties": [
+        {
+          "name": "bomwerk:match-coverage",
+          "value": "unversioned-purl"
+        }
+      ],
+      "purl": "pkg:generic/stb",
+      "type": "library"
+    },
+    {
+      "bom-ref": "d745decc-4094-5c3f-aa65-1508f0f2998e",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "third_party/uthash"
+          }
+        ]
+      },
+      "name": "uthash",
+      "properties": [
+        {
+          "name": "bomwerk:match-coverage",
+          "value": "unversioned-purl"
+        }
+      ],
+      "purl": "pkg:generic/uthash",
+      "type": "library"
+    },
+    {
+      "bom-ref": "2253b16f-e77a-5bb7-9953-a2fa40d6faaf",
+      "cpe": "cpe:2.3:a:*:zlib:1.2.11:*:*:*:*:*:*:*",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "third_party/zlib"
+          }
+        ]
+      },
+      "licenses": [
+        {
+          "license": {
+            "name": "Zlib"
+          }
+        }
+      ],
+      "name": "zlib",
+      "properties": [
+        {
+          "name": "bomwerk:match-coverage",
+          "value": "unmapped-purl-type"
+        }
+      ],
+      "purl": "pkg:generic/zlib@1.2.11",
+      "type": "library",
+      "version": "1.2.11"
+    },
+    {
+      "bom-ref": "3678ff34-c110-502b-8371-e7aecc39b3f9",
+      "name": "checkout",
+      "purl": "pkg:github/actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+      "supplier": {
+        "name": "actions"
+      },
+      "type": "library",
+      "version": "11bd71901bbe5b1630ceea73d27597364c9af683"
+    },
+    {
+      "bom-ref": "8c047c38-3453-5546-bd6b-9141bb74527f",
+      "name": "setup-node",
+      "purl": "pkg:github/actions/setup-node@v4.1.0",
+      "supplier": {
+        "name": "actions"
+      },
+      "type": "library",
+      "version": "v4.1.0"
+    },
+    {
+      "bom-ref": "2c63af36-bb5e-558b-99b8-2e532408749b",
+      "name": "tinyxml2",
+      "purl": "pkg:github/leethomason/tinyxml2@1dee28e51f9175a31955b9791c74c430fe13dc82",
+      "supplier": {
+        "name": "leethomason"
+      },
+      "type": "library",
+      "version": "1dee28e51f9175a31955b9791c74c430fe13dc82"
+    },
+    {
+      "bom-ref": "f9be1d4e-00da-544b-b066-ed296b701f0b",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "third_party/openssl"
+          }
+        ]
+      },
+      "name": "openssl",
+      "properties": [
+        {
+          "name": "bomwerk:match-coverage",
+          "value": "unversioned-purl"
+        }
+      ],
+      "purl": "pkg:github/openssl/openssl",
+      "supplier": {
+        "name": "openssl"
+      },
+      "type": "library"
+    },
+    {
+      "bom-ref": "7ee84ae2-b34b-5da8-be5c-f2d201ee1f52",
+      "name": "@isaacs/cliui",
+      "purl": "pkg:npm/%40isaacs/cliui@8.0.2",
+      "scope": "excluded",
+      "supplier": {
+        "name": "isaacs"
+      },
+      "type": "library",
+      "version": "8.0.2"
+    },
+    {
+      "bom-ref": "52350c82-9d91-57d3-abbe-ef7ec4801ea3",
+      "name": "@pkgjs/parseargs",
+      "purl": "pkg:npm/%40pkgjs/parseargs@0.11.0",
+      "scope": "excluded",
+      "supplier": {
+        "name": "pkgjs"
+      },
+      "type": "library",
+      "version": "0.11.0"
+    },
+    {
+      "bom-ref": "00afa17b-23b6-5afd-8560-29b9fe9c5723",
+      "name": "ansi-regex",
+      "purl": "pkg:npm/ansi-regex@5.0.1",
+      "scope": "excluded",
+      "type": "library",
+      "version": "5.0.1"
+    },
+    {
+      "bom-ref": "5ec84009-6f97-52b1-83d5-84533eefb7f8",
+      "name": "ansi-regex",
+      "purl": "pkg:npm/ansi-regex@6.3.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "6.3.0"
+    },
+    {
+      "bom-ref": "87193ea5-c848-5cee-9d47-a08638cd75dc",
+      "name": "ansi-styles",
+      "purl": "pkg:npm/ansi-styles@4.3.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "4.3.0"
+    },
+    {
+      "bom-ref": "7325771e-3902-5bf0-8638-3798f6300629",
+      "name": "ansi-styles",
+      "purl": "pkg:npm/ansi-styles@6.2.3",
+      "scope": "excluded",
+      "type": "library",
+      "version": "6.2.3"
+    },
+    {
+      "bom-ref": "03e90fa7-4584-5bcd-96c3-1ffe790e9ffb",
+      "name": "balanced-match",
+      "purl": "pkg:npm/balanced-match@1.0.2",
+      "scope": "excluded",
+      "type": "library",
+      "version": "1.0.2"
+    },
+    {
+      "bom-ref": "31d0f565-97b7-5bf3-b949-3739edffee6c",
+      "name": "brace-expansion",
+      "purl": "pkg:npm/brace-expansion@2.1.7",
+      "scope": "excluded",
+      "type": "library",
+      "version": "2.1.7"
+    },
+    {
+      "bom-ref": "ccb536c6-ee3f-5d0d-9510-c820f3172fe3",
+      "name": "color-convert",
+      "purl": "pkg:npm/color-convert@2.0.1",
+      "scope": "excluded",
+      "type": "library",
+      "version": "2.0.1"
+    },
+    {
+      "bom-ref": "de42fe2e-ecc8-5071-ae3c-0fcb0055559a",
+      "name": "color-name",
+      "purl": "pkg:npm/color-name@1.1.4",
+      "scope": "excluded",
+      "type": "library",
+      "version": "1.1.4"
+    },
+    {
+      "bom-ref": "821ae1e5-c7f8-5f65-85d4-e55ed2cb918a",
+      "name": "cross-spawn",
+      "purl": "pkg:npm/cross-spawn@7.0.6",
+      "scope": "excluded",
+      "type": "library",
+      "version": "7.0.6"
+    },
+    {
+      "bom-ref": "866e8f2f-4874-5106-a3f4-98d9e6bf954a",
+      "name": "debug",
+      "purl": "pkg:npm/debug@4.3.4",
+      "type": "library",
+      "version": "4.3.4"
+    },
+    {
+      "bom-ref": "f7410ee0-a8fe-5330-967f-40c933d08305",
+      "name": "eastasianwidth",
+      "purl": "pkg:npm/eastasianwidth@0.2.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "0.2.0"
+    },
+    {
+      "bom-ref": "0c52f026-e8f6-5f95-9fd2-6ca205b1e958",
+      "name": "emoji-regex",
+      "purl": "pkg:npm/emoji-regex@8.0.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "8.0.0"
+    },
+    {
+      "bom-ref": "2a7582da-f97c-5097-9073-3b357486fba4",
+      "name": "emoji-regex",
+      "purl": "pkg:npm/emoji-regex@9.2.2",
+      "scope": "excluded",
+      "type": "library",
+      "version": "9.2.2"
+    },
+    {
+      "bom-ref": "2d8c46e1-45ce-596d-bb38-01de4466b9ce",
+      "name": "foreground-child",
+      "purl": "pkg:npm/foreground-child@3.3.1",
+      "scope": "excluded",
+      "type": "library",
+      "version": "3.3.1"
+    },
+    {
+      "bom-ref": "ced810a4-bb13-5721-8e87-f875e0133778",
+      "name": "glob",
+      "purl": "pkg:npm/glob@10.5.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "10.5.0"
+    },
+    {
+      "bom-ref": "e7670557-84d6-5c01-a2dc-d0e6cf096eff",
+      "name": "is-fullwidth-code-point",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "3.0.0"
+    },
+    {
+      "bom-ref": "77463508-60d1-54c3-8e5b-437e38c699ee",
+      "name": "isexe",
+      "purl": "pkg:npm/isexe@2.0.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "2.0.0"
+    },
+    {
+      "bom-ref": "c00e7a67-4ab6-5c54-b01f-0758b71df8b7",
+      "name": "jackspeak",
+      "purl": "pkg:npm/jackspeak@3.4.3",
+      "scope": "excluded",
+      "type": "library",
+      "version": "3.4.3"
+    },
+    {
+      "bom-ref": "d4861f07-3f2a-5a08-b292-4ec598281593",
+      "name": "lru-cache",
+      "purl": "pkg:npm/lru-cache@10.4.3",
+      "scope": "excluded",
+      "type": "library",
+      "version": "10.4.3"
+    },
+    {
+      "bom-ref": "8a6768ac-bfb7-5a2e-8c39-5fcb9fc8ddf9",
+      "name": "minimatch",
+      "purl": "pkg:npm/minimatch@9.0.9",
+      "scope": "excluded",
+      "type": "library",
+      "version": "9.0.9"
+    },
+    {
+      "bom-ref": "47220a72-7ea6-580e-b884-8acdb155cdde",
+      "name": "minipass",
+      "purl": "pkg:npm/minipass@7.1.3",
+      "scope": "excluded",
+      "type": "library",
+      "version": "7.1.3"
+    },
+    {
+      "bom-ref": "e88d7130-4f7a-5f32-b7e1-340c854909aa",
+      "name": "ms",
+      "purl": "pkg:npm/ms@2.1.2",
+      "type": "library",
+      "version": "2.1.2"
+    },
+    {
+      "bom-ref": "37290a29-748b-55f8-a72c-6aa21630a5ad",
+      "name": "ms",
+      "purl": "pkg:npm/ms@2.1.3",
+      "type": "library",
+      "version": "2.1.3"
+    },
+    {
+      "bom-ref": "35e9c674-ed01-5e58-a3b3-21f4259838d3",
+      "name": "package-json-from-dist",
+      "purl": "pkg:npm/package-json-from-dist@1.0.1",
+      "scope": "excluded",
+      "type": "library",
+      "version": "1.0.1"
+    },
+    {
+      "bom-ref": "090c6cca-11db-5f7b-9656-a17ebc4d4e8c",
+      "name": "path-key",
+      "purl": "pkg:npm/path-key@3.1.1",
+      "scope": "excluded",
+      "type": "library",
+      "version": "3.1.1"
+    },
+    {
+      "bom-ref": "dd42570f-e976-573f-b265-528decd0fd3e",
+      "name": "path-scurry",
+      "purl": "pkg:npm/path-scurry@1.11.1",
+      "scope": "excluded",
+      "type": "library",
+      "version": "1.11.1"
+    },
+    {
+      "bom-ref": "3f826675-3e49-5994-8530-35d63053caaf",
+      "name": "rimraf",
+      "purl": "pkg:npm/rimraf@5.0.5",
+      "scope": "excluded",
+      "type": "library",
+      "version": "5.0.5"
+    },
+    {
+      "bom-ref": "49f5b31a-e89e-56ca-ba47-e9055f7f4149",
+      "name": "shebang-command",
+      "purl": "pkg:npm/shebang-command@2.0.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "2.0.0"
+    },
+    {
+      "bom-ref": "be54c8b9-15b2-5c45-b61c-12e1c72dec4e",
+      "name": "shebang-regex",
+      "purl": "pkg:npm/shebang-regex@3.0.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "3.0.0"
+    },
+    {
+      "bom-ref": "5f0fcb24-6e4a-5fd6-ad83-bc83c109ade0",
+      "name": "signal-exit",
+      "purl": "pkg:npm/signal-exit@4.1.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "4.1.0"
+    },
+    {
+      "bom-ref": "97274244-04cf-52c1-a19f-261f3dcdda4c",
+      "name": "string-width-cjs",
+      "purl": "pkg:npm/string-width-cjs@4.2.3",
+      "scope": "excluded",
+      "type": "library",
+      "version": "4.2.3"
+    },
+    {
+      "bom-ref": "b24e452c-1c27-5d7e-ae8d-47c42b4e5a8a",
+      "name": "string-width",
+      "purl": "pkg:npm/string-width@4.2.3",
+      "scope": "excluded",
+      "type": "library",
+      "version": "4.2.3"
+    },
+    {
+      "bom-ref": "ab23f491-b6f1-5e32-ac16-0a28bfb48d69",
+      "name": "string-width",
+      "purl": "pkg:npm/string-width@5.1.2",
+      "scope": "excluded",
+      "type": "library",
+      "version": "5.1.2"
+    },
+    {
+      "bom-ref": "f2f552a6-02cb-5a92-93cb-ba7690f69d0f",
+      "name": "strip-ansi-cjs",
+      "purl": "pkg:npm/strip-ansi-cjs@6.0.1",
+      "scope": "excluded",
+      "type": "library",
+      "version": "6.0.1"
+    },
+    {
+      "bom-ref": "1471ad69-bdce-51e4-9cc0-d2476272e93c",
+      "name": "strip-ansi",
+      "purl": "pkg:npm/strip-ansi@6.0.1",
+      "scope": "excluded",
+      "type": "library",
+      "version": "6.0.1"
+    },
+    {
+      "bom-ref": "0faf8d8c-f278-58cf-a88e-14ef51c59637",
+      "name": "strip-ansi",
+      "purl": "pkg:npm/strip-ansi@7.2.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "7.2.0"
+    },
+    {
+      "bom-ref": "054c8fb4-d3b7-50d3-b585-ab53e8117160",
+      "name": "which",
+      "purl": "pkg:npm/which@2.0.2",
+      "scope": "excluded",
+      "type": "library",
+      "version": "2.0.2"
+    },
+    {
+      "bom-ref": "6de617ce-6cc4-5e60-9224-5cf2ee66add2",
+      "name": "wrap-ansi-cjs",
+      "purl": "pkg:npm/wrap-ansi-cjs@7.0.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "7.0.0"
+    },
+    {
+      "bom-ref": "eaa9221d-8df1-5819-9f59-d73b697afa44",
+      "name": "wrap-ansi",
+      "purl": "pkg:npm/wrap-ansi@8.1.0",
+      "scope": "excluded",
+      "type": "library",
+      "version": "8.1.0"
+    },
+    {
+      "bom-ref": "5c9dbb9e-de34-538d-884c-93494aeffb9f",
+      "name": "fmt",
+      "properties": [
+        {
+          "name": "bomwerk:match-coverage",
+          "value": "unversioned-purl"
+        }
+      ],
+      "purl": "pkg:vcpkg/fmt",
+      "type": "library"
+    },
+    {
+      "bom-ref": "41733166-3e05-5afc-a2ca-5066b049b9ac",
+      "cpe": "cpe:2.3:a:*:nlohmann-json:3.11.3:*:*:*:*:*:*:*",
+      "name": "nlohmann-json",
+      "properties": [
+        {
+          "name": "bomwerk:match-coverage",
+          "value": "unmapped-purl-type"
+        }
+      ],
+      "purl": "pkg:vcpkg/nlohmann-json@3.11.3",
+      "type": "library",
+      "version": "3.11.3"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "4694c1d0-f3c7-5799-b9e4-46dede529c0f"
+    },
+    {
+      "ref": "9f59bc00-a066-5171-89b2-0b3bb2bdbbb9"
+    },
+    {
+      "ref": "50e25f6a-c9b9-5157-a29c-a8b659614845"
+    },
+    {
+      "ref": "603ab5ae-2f71-542b-9fb8-8ceefcde27b3"
+    },
+    {
+      "ref": "8ec2adef-d76c-5605-9e5e-46e0e7e1841b"
+    },
+    {
+      "ref": "164864a2-cf01-58d3-993c-f99ef3cd7441"
+    },
+    {
+      "ref": "d745decc-4094-5c3f-aa65-1508f0f2998e"
+    },
+    {
+      "ref": "2253b16f-e77a-5bb7-9953-a2fa40d6faaf"
+    },
+    {
+      "ref": "3678ff34-c110-502b-8371-e7aecc39b3f9"
+    },
+    {
+      "ref": "8c047c38-3453-5546-bd6b-9141bb74527f"
+    },
+    {
+      "ref": "2c63af36-bb5e-558b-99b8-2e532408749b"
+    },
+    {
+      "ref": "f9be1d4e-00da-544b-b066-ed296b701f0b"
+    },
+    {
+      "ref": "7ee84ae2-b34b-5da8-be5c-f2d201ee1f52"
+    },
+    {
+      "ref": "52350c82-9d91-57d3-abbe-ef7ec4801ea3"
+    },
+    {
+      "ref": "00afa17b-23b6-5afd-8560-29b9fe9c5723"
+    },
+    {
+      "ref": "5ec84009-6f97-52b1-83d5-84533eefb7f8"
+    },
+    {
+      "ref": "87193ea5-c848-5cee-9d47-a08638cd75dc"
+    },
+    {
+      "ref": "7325771e-3902-5bf0-8638-3798f6300629"
+    },
+    {
+      "ref": "03e90fa7-4584-5bcd-96c3-1ffe790e9ffb"
+    },
+    {
+      "ref": "31d0f565-97b7-5bf3-b949-3739edffee6c"
+    },
+    {
+      "ref": "ccb536c6-ee3f-5d0d-9510-c820f3172fe3"
+    },
+    {
+      "ref": "de42fe2e-ecc8-5071-ae3c-0fcb0055559a"
+    },
+    {
+      "ref": "821ae1e5-c7f8-5f65-85d4-e55ed2cb918a"
+    },
+    {
+      "ref": "866e8f2f-4874-5106-a3f4-98d9e6bf954a"
+    },
+    {
+      "ref": "f7410ee0-a8fe-5330-967f-40c933d08305"
+    },
+    {
+      "ref": "0c52f026-e8f6-5f95-9fd2-6ca205b1e958"
+    },
+    {
+      "ref": "2a7582da-f97c-5097-9073-3b357486fba4"
+    },
+    {
+      "ref": "2d8c46e1-45ce-596d-bb38-01de4466b9ce"
+    },
+    {
+      "ref": "ced810a4-bb13-5721-8e87-f875e0133778"
+    },
+    {
+      "ref": "e7670557-84d6-5c01-a2dc-d0e6cf096eff"
+    },
+    {
+      "ref": "77463508-60d1-54c3-8e5b-437e38c699ee"
+    },
+    {
+      "ref": "c00e7a67-4ab6-5c54-b01f-0758b71df8b7"
+    },
+    {
+      "ref": "d4861f07-3f2a-5a08-b292-4ec598281593"
+    },
+    {
+      "ref": "8a6768ac-bfb7-5a2e-8c39-5fcb9fc8ddf9"
+    },
+    {
+      "ref": "47220a72-7ea6-580e-b884-8acdb155cdde"
+    },
+    {
+      "ref": "e88d7130-4f7a-5f32-b7e1-340c854909aa"
+    },
+    {
+      "ref": "37290a29-748b-55f8-a72c-6aa21630a5ad"
+    },
+    {
+      "ref": "35e9c674-ed01-5e58-a3b3-21f4259838d3"
+    },
+    {
+      "ref": "090c6cca-11db-5f7b-9656-a17ebc4d4e8c"
+    },
+    {
+      "ref": "dd42570f-e976-573f-b265-528decd0fd3e"
+    },
+    {
+      "ref": "3f826675-3e49-5994-8530-35d63053caaf"
+    },
+    {
+      "ref": "49f5b31a-e89e-56ca-ba47-e9055f7f4149"
+    },
+    {
+      "ref": "be54c8b9-15b2-5c45-b61c-12e1c72dec4e"
+    },
+    {
+      "ref": "5f0fcb24-6e4a-5fd6-ad83-bc83c109ade0"
+    },
+    {
+      "ref": "97274244-04cf-52c1-a19f-261f3dcdda4c"
+    },
+    {
+      "ref": "b24e452c-1c27-5d7e-ae8d-47c42b4e5a8a"
+    },
+    {
+      "ref": "ab23f491-b6f1-5e32-ac16-0a28bfb48d69"
+    },
+    {
+      "ref": "f2f552a6-02cb-5a92-93cb-ba7690f69d0f"
+    },
+    {
+      "ref": "1471ad69-bdce-51e4-9cc0-d2476272e93c"
+    },
+    {
+      "ref": "0faf8d8c-f278-58cf-a88e-14ef51c59637"
+    },
+    {
+      "ref": "054c8fb4-d3b7-50d3-b585-ab53e8117160"
+    },
+    {
+      "ref": "6de617ce-6cc4-5e60-9224-5cf2ee66add2"
+    },
+    {
+      "ref": "eaa9221d-8df1-5819-9f59-d73b697afa44"
+    },
+    {
+      "ref": "5c9dbb9e-de34-538d-884c-93494aeffb9f"
+    },
+    {
+      "ref": "41733166-3e05-5afc-a2ca-5066b049b9ac"
+    }
+  ],
+  "metadata": {
+    "properties": [
+      {
+        "name": "bomwerk:coverage:components",
+        "value": "55"
+      },
+      {
+        "name": "bomwerk:coverage:matchable",
+        "value": "44"
+      },
+      {
+        "name": "bomwerk:coverage:no-identifier",
+        "value": "0"
+      },
+      {
+        "name": "bomwerk:coverage:unmapped-purl-type",
+        "value": "6"
+      },
+      {
+        "name": "bomwerk:coverage:unmatched",
+        "value": "11"
+      },
+      {
+        "name": "bomwerk:coverage:unversioned-purl",
+        "value": "5"
+      }
+    ],
+    "timestamp": "2025-01-01T00:00:00Z",
+    "tools": {
+      "components": [
+        {
+          "name": "bomwerk",
+          "type": "application",
+          "version": "0.1.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:35cedb4c-fe0b-5d8b-8b95-e44158cf157c",
+  "specVersion": "1.6",
+  "version": 1
+}

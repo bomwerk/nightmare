@@ -1,0 +1,24 @@
+{
+  "$comment": [
+    "vcpkg manifest for the host-side tooling. Neither dependency is compiled by this",
+    "repo's CMake build - both are declaration-only, on purpose.",
+    "fmt is declared BARE (no version constraint), so a scanner has nothing to pin it to.",
+    "nlohmann-json is pinned through `overrides`, which is the only place vcpkg records",
+    "an exact version. The contrast between the two is the point."
+  ],
+  "name": "nightmare",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "fmt",
+    {
+      "name": "nlohmann-json",
+      "version>=": "3.11.2"
+    }
+  ],
+  "overrides": [
+    {
+      "name": "nlohmann-json",
+      "version": "3.11.3"
+    }
+  ]
+}

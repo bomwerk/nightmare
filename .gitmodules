@@ -1,0 +1,12 @@
+# OpenSSL, pinned in November 2022 and never updated, on purpose.
+#
+# This is ingredient 2 of 5: a submodule that a real project added once, pinned, and
+# forgot. No OpenSSL byte is in this repository - see third_party/SOURCES.md.
+#
+# A `git clone --depth 1` without submodule initialization is the default posture, and it is the
+# interesting one: a scanner has to notice a dependency it cannot see the contents of.
+# Initializing it is a documented second step:
+#     git submodule update --init --depth 1 third_party/openssl
+[submodule "third_party/openssl"]
+	path = third_party/openssl
+	url = https://github.com/openssl/openssl.git

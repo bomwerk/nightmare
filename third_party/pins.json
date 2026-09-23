@@ -1,0 +1,327 @@
+{
+  "_comment": [
+    "Provenance for every third-party file in this repository. This is the source of truth;",
+    "third_party/SOURCES.md and NOTICE are the readable versions, and",
+    "tools/verify_vendored.sh fails if they disagree with this file.",
+    "",
+    "A file with \"modified\": false must match the upstream file at the pinned commit or",
+    "release archive byte for byte. verify_vendored.sh downloads upstream and compares, so",
+    "that is checked rather than taken on trust.",
+    "",
+    "\"origin\": \"added\" means we wrote the file, and its note says why.",
+    "\"origin\": \"built\" means we compiled it from pinned source; its sha256 is recorded.",
+    "\"modified\": true means an intentional local change, and the file names its patch."
+  ],
+  "pinned_at": "2026-09-18",
+  "components": {
+    "zlib": {
+      "upstream": "https://github.com/madler/zlib.git",
+      "ref": "v1.2.11",
+      "_ref_note": "v1.2.11 is an annotated tag. Its tag object is 7085a61bce3e; the commit below is refs/tags/v1.2.11^{}. Pinning the tag object by mistake still fetches the right tree, which hides the error, so verify_vendored.sh rejects it.",
+      "commit": "cacf7f1d4e3d44d871b605da3b647f07d718623f",
+      "license": "Zlib",
+      "vendored_at": "third_party/zlib",
+      "why": "The library with the known CVEs. Version 1.2.11 (2017) has CVE-2018-25032 in deflate.c and CVE-2022-37434 (CVSS 9.8) in inflate.c. Both files are vendored and compiled, so the vulnerable code really ends up in the binary.",
+      "files": {
+        "zlib.h": {
+          "upstream_path": "zlib.h",
+          "modified": false,
+          "note": "declares ZLIB_VERSION \"1.2.11\", which is what version detection reads"
+        },
+        "zconf.h": {
+          "upstream_path": "zconf.h",
+          "modified": false
+        },
+        "zutil.h": {
+          "upstream_path": "zutil.h",
+          "modified": false
+        },
+        "zutil.c": {
+          "upstream_path": "zutil.c",
+          "modified": false
+        },
+        "adler32.c": {
+          "upstream_path": "adler32.c",
+          "modified": false
+        },
+        "crc32.c": {
+          "upstream_path": "crc32.c",
+          "modified": false
+        },
+        "crc32.h": {
+          "upstream_path": "crc32.h",
+          "modified": false
+        },
+        "deflate.c": {
+          "upstream_path": "deflate.c",
+          "modified": false,
+          "note": "CVE-2018-25032 is here; compiled in config-a"
+        },
+        "deflate.h": {
+          "upstream_path": "deflate.h",
+          "modified": false
+        },
+        "trees.c": {
+          "upstream_path": "trees.c",
+          "modified": false
+        },
+        "trees.h": {
+          "upstream_path": "trees.h",
+          "modified": false
+        },
+        "inflate.c": {
+          "upstream_path": "inflate.c",
+          "modified": false,
+          "note": "CVE-2022-37434 (CVSS 9.8) is here; compiled in config-a"
+        },
+        "inflate.h": {
+          "upstream_path": "inflate.h",
+          "modified": false
+        },
+        "inftrees.c": {
+          "upstream_path": "inftrees.c",
+          "modified": false
+        },
+        "inftrees.h": {
+          "upstream_path": "inftrees.h",
+          "modified": false
+        },
+        "inffast.c": {
+          "upstream_path": "inffast.c",
+          "modified": false
+        },
+        "inffast.h": {
+          "upstream_path": "inffast.h",
+          "modified": false
+        },
+        "inffixed.h": {
+          "upstream_path": "inffixed.h",
+          "modified": false
+        },
+        "compress.c": {
+          "upstream_path": "compress.c",
+          "modified": false
+        },
+        "uncompr.c": {
+          "upstream_path": "uncompr.c",
+          "modified": false
+        },
+        "README": {
+          "upstream_path": "README",
+          "modified": false,
+          "note": "upstream README, unchanged; the license text is at the end"
+        },
+        "LICENSE": {
+          "origin": "added",
+          "modified": false,
+          "note": "written by us: upstream has no LICENSE file, so this copies the text from lines 4-23 of zlib.h. A vendor directory without a license file looks careless, and license detection reads this file"
+        },
+        "CMakeLists.txt": {
+          "origin": "added",
+          "modified": false,
+          "note": "written by us: a small replacement for upstream's build setup that compiles the deflate/inflate core and leaves out gz*.c. It does not define Z_SOLO (see the file)"
+        },
+        "gzguts.h": {
+          "upstream_path": "gzguts.h",
+          "modified": false,
+          "note": "header only. zutil.c includes it unless Z_SOLO is defined, and Z_SOLO would turn off zlib's default allocator. The gz*.c files are still left out"
+        }
+      }
+    },
+    "freertos": {
+      "upstream": "https://github.com/FreeRTOS/FreeRTOS-Kernel.git",
+      "ref": "V11.1.0",
+      "commit": "dbf70559b27d39c1fdb68dfb9a32140b6a6777a0",
+      "license": "MIT",
+      "vendored_at": "third_party/freertos",
+      "why": "The fork. list.c has a local change while tskKERNEL_VERSION_NUMBER still says \"V11.1.0\". The code is no longer V11.1.0, and none of the tools compared here can tell, bomwerk included.",
+      "files": {
+        "include/FreeRTOS.h": {
+          "upstream_path": "include/FreeRTOS.h",
+          "modified": false
+        },
+        "include/list.h": {
+          "upstream_path": "include/list.h",
+          "modified": false,
+          "note": "header for list.c"
+        },
+        "include/task.h": {
+          "upstream_path": "include/task.h",
+          "modified": false,
+          "note": "declares tskKERNEL_VERSION_NUMBER \"V11.1.0\" at line 56. Version detection reads it, and it is also why the fork goes unnoticed"
+        },
+        "include/projdefs.h": {
+          "upstream_path": "include/projdefs.h",
+          "modified": false
+        },
+        "include/portable.h": {
+          "upstream_path": "include/portable.h",
+          "modified": false
+        },
+        "include/deprecated_definitions.h": {
+          "upstream_path": "include/deprecated_definitions.h",
+          "modified": false,
+          "note": "57 includes, all behind #ifdefs for old ports; none apply to the POSIX port"
+        },
+        "include/mpu_wrappers.h": {
+          "upstream_path": "include/mpu_wrappers.h",
+          "modified": false
+        },
+        "include/FreeRTOSConfig.h": {
+          "upstream_path": "examples/template_configuration/FreeRTOSConfig.h",
+          "modified": false,
+          "note": "unchanged from upstream's examples/template_configuration, which is why the upstream path differs. Vendor kernel drops such as STM32Cube and ESP-IDF also ship a config inside the kernel tree"
+        },
+        "portable/ThirdParty/GCC/Posix/portmacro.h": {
+          "upstream_path": "portable/ThirdParty/GCC/Posix/portmacro.h",
+          "modified": false,
+          "note": "the POSIX port header, so the kernel compiles on an ordinary Linux machine"
+        },
+        "LICENSE.md": {
+          "upstream_path": "LICENSE.md",
+          "modified": false,
+          "note": "MIT, unchanged"
+        },
+        "README.md": {
+          "upstream_path": "README.md",
+          "modified": false,
+          "note": "upstream README, unchanged"
+        },
+        "list.c": {
+          "upstream_path": "list.c",
+          "modified": true,
+          "patch": "PATCHES/0001-bounded-list-insert.patch",
+          "note": "the fork. Lines 1-246 are unchanged upstream code; uxListInsertBounded() was added below a banner comment and is not in any FreeRTOS release. Reversing the patch with `git apply -R` restores the upstream file exactly, and the verifier checks this. tskKERNEL_VERSION_NUMBER was left at V11.1.0 on purpose"
+        },
+        "CMakeLists.txt": {
+          "origin": "added",
+          "modified": false,
+          "note": "written by us: compiles list.c only, with the POSIX port on the include path"
+        },
+        "PATCHES/0001-bounded-list-insert.patch": {
+          "origin": "added",
+          "modified": false,
+          "note": "written by us: the local change to list.c as a reversible diff"
+        }
+      }
+    },
+    "uthash": {
+      "upstream": "https://github.com/troydhanson/uthash.git",
+      "ref": "v2.4.0",
+      "commit": "a49bed0b4abb7dff16c73906dcdc8a9718d582d2",
+      "license": "BSD-1-Clause-variant (revised BSD, see upstream LICENSE)",
+      "vendored_at": "third_party/uthash",
+      "why": "Header-only, and used in config-a only through an include path. That is the weakest kind of usage, and none of the other tools tells it apart. Its LICENSE contains none of the seven license names bomwerk looks for, so bomwerk reports no license for it.",
+      "files": {
+        "uthash.h": {
+          "upstream_path": "src/uthash.h",
+          "modified": false,
+          "note": "the whole library, header-only. config-a reaches it only through an include path"
+        },
+        "LICENSE": {
+          "upstream_path": "LICENSE",
+          "modified": false,
+          "note": "revised BSD. Contains none of the seven license names bomwerk looks for (checked), so bomwerk reports no license; GROUND-TRUTH.md says so"
+        }
+      }
+    },
+    "stb": {
+      "upstream": "https://github.com/nothings/stb.git",
+      "ref": "master@2026-09-18",
+      "commit": "2c980bb59875b0d32144a71867fbdebb2f77cd20",
+      "license": "MIT OR Unlicense (dual)",
+      "vendored_at": "third_party/stb",
+      "why": "The unused library. Real upstream code that no target, include path or #include uses in either configuration, like something dropped into the tree years ago and forgotten. Upstream has no tags, so the pin is a commit.",
+      "files": {
+        "stb_image.h": {
+          "upstream_path": "stb_image.h",
+          "modified": false,
+          "note": "not used by any target, include path or #include in either configuration. `#define STBI_VERSION 1` is a number, not a quoted string, so no version is found and the name comes from the folder"
+        },
+        "LICENSE": {
+          "upstream_path": "LICENSE",
+          "modified": false,
+          "note": "dual: 'ALTERNATIVE A - MIT License' or 'ALTERNATIVE B - Public Domain (Unlicense)'. bomwerk's license check stops at 'MIT License' and reports MIT, dropping the Unlicense option; GROUND-TRUTH.md records this"
+        }
+      }
+    },
+    "openssl": {
+      "upstream": "https://github.com/openssl/openssl.git",
+      "ref": "openssl-3.0.7",
+      "commit": "19cc035b6c6f2283573d29c7ea7f7d675cf750ce",
+      "license": "Apache-2.0",
+      "vendored_at": null,
+      "submodule_path": "third_party/openssl",
+      "why": "The submodule, pinned in November 2022 and never updated. Not vendored: no OpenSSL file is in this repo. bomwerk reads .gitmodules as a file, so it needs no checkout to see the dependency. Building against OpenSSL is a separate option.",
+      "files": {}
+    },
+    "sqlite": {
+      "upstream": "https://www.sqlite.org/2023/sqlite-amalgamation-3410200.zip",
+      "upstream_kind": "archive",
+      "archive_sha256": "01df06a84803c1ab4d62c64e995b151b2dbcf5dbc93bbc5eee213cb18225d987",
+      "ref": "3.41.2 (amalgamation 3410200)",
+      "commit": null,
+      "license": "Public domain (SQLite blessing)",
+      "vendored_at": "third_party/sqlite-prebuilt",
+      "why": "A prebuilt static library: a header and a .a, no source, which is how SDK vendors often ship libraries. SQLite's amalgamation is generated for each release and only exists in the release zip, so the pin is the zip's sha256 instead of a git commit.",
+      "files": {
+        "include/sqlite3.h": {
+          "upstream_path": "sqlite-amalgamation-3410200/sqlite3.h",
+          "modified": false,
+          "note": "declares SQLITE_VERSION \"3.41.2\", the only place in this directory where the version is written as text"
+        },
+        "lib/libsqlite3.a": {
+          "origin": "built",
+          "sha256": "7883a783efeaabf43f74138a9ec21db578ccd2e28badb42137c5e9fb18091d43",
+          "members": [
+            "sqlite3.o"
+          ],
+          "built_from": "sqlite-amalgamation-3410200/sqlite3.c",
+          "toolchain": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ar in deterministic mode",
+          "note": "compiled by tools/build_prebuilt.sh from the pinned zip; linked in config-a only"
+        }
+      }
+    },
+    "cjson": {
+      "upstream": "https://github.com/DaveGamble/cJSON.git",
+      "ref": "v1.7.15",
+      "_ref_note": "v1.7.15 is an annotated tag. Its tag object is 8e774f9d59d0; the commit below is refs/tags/v1.7.15^{}.",
+      "commit": "d348621ca93571343a56862df7de4ff3bc9b5667",
+      "license": "MIT",
+      "vendored_at": "third_party/cjson-prebuilt",
+      "why": "A second prebuilt static library, chosen because its header has no quoted version string: cJSON.h writes the version as three numbers (CJSON_VERSION_MAJOR 1, _MINOR 7, _PATCH 15). A person can read it; none of the four tools does, bomwerk included, which names the component after its folder.",
+      "files": {
+        "include/cJSON.h": {
+          "upstream_path": "cJSON.h",
+          "modified": false,
+          "note": "the version appears only as three numbers (1, 7, 15), never as \"1.7.15\""
+        },
+        "LICENSE": {
+          "upstream_path": "LICENSE",
+          "modified": false,
+          "note": "MIT text, but without the words 'MIT License', so license detection by substring doesn't recognize it"
+        },
+        "lib/libcjson.a": {
+          "origin": "built",
+          "sha256": "6e026e04af93fc457390665ff43fedb8be1d0e7372e0b00644f244c75ff94af2",
+          "members": [
+            "cJSON.o"
+          ],
+          "built_from": "cJSON.c",
+          "toolchain": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ar in deterministic mode",
+          "note": "compiled by tools/build_prebuilt.sh from the pinned commit; linked in config-a only"
+        }
+      }
+    },
+    "tinyxml2": {
+      "upstream": "https://github.com/leethomason/tinyxml2.git",
+      "ref": "9.0.0",
+      "commit": "1dee28e51f9175a31955b9791c74c430fe13dc82",
+      "license": "Zlib",
+      "vendored_at": null,
+      "declared_in": "CMakeLists.txt (FetchContent_Declare)",
+      "why": "A dependency CMake downloads at configure time with FetchContent, pinned by commit. None of its files are in this repo, and it is only downloaded with -DNIGHTMARE_ENABLE_XML=ON. Static scanners read the same CMakeLists.txt either way.",
+      "files": {}
+    }
+  }
+}

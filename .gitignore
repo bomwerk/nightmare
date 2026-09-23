@@ -1,0 +1,25 @@
+# Build trees. bomwerk excludes `build` by default (src/core/exclusions.cpp), so a
+# plain `bomwerk scan .` is unaffected by whether anyone has built.
+build/
+
+# Legacy in-tree cache. Caches now live in ~/.cache/bomwerk-nightmare/ because
+# scanners ignore .gitignore and anything in the tree pollutes every tool's result.
+.tools/
+
+# Local, unshared comparison output. Committed results live in results/ and
+# docs/RESULTS.md so a skeptic can diff them without installing anything.
+*.local.*
+results/*.local.*
+
+# STANDING RULE (docs/METHODOLOGY.md): this repo configures NO scanner. A corpus
+# that tunes one tool and not its rivals produces a worthless table. These are
+# listed here so an accidental local config can never be committed.
+bomwerk.toml
+.bomwerk/
+syft.yaml
+.syft.yaml
+.cdxgenrc
+
+# Python bytecode. One was committed by accident in the first commit; never again.
+__pycache__/
+*.pyc

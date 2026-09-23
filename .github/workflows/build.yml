@@ -1,0 +1,55 @@
+# Builds both configurations and re-proves every provenance claim in this repo.
+#
+# The two `uses:` below are pinned DIFFERENTLY on purpose: one to an immutable commit
+# SHA, one to a mutable tag. A supply-chain-aware SBOM should be able to tell those
+# apart, and docs/RESULTS.md reports whether each tool does.
+
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+# The corpus deliberately includes one mutable action reference. The workflow itself
+# needs only repository contents, so keep the token read-only.
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        preset: [config-a, config-b]
+    steps:
+      # Pinned to an immutable commit SHA (actions/checkout v4.2.2).
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          submodules: false
+
+      - name: Configure and build ${{ matrix.preset }}
+        run: |
+          cmake --preset ${{ matrix.preset }}
+          cmake --build build/${{ matrix.preset }}
+
+      - name: Every third-party byte is what we say it is
+        run: bash tools/verify_vendored.sh
+
+      - name: SOURCES.md agrees with pins.json
+        run: python3 tools/render_sources.py --check
+
+  web:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      # Pinned to a mutable tag on purpose; see the header comment.
+      - uses: actions/setup-node@v4.1.0
+        with:
+          node-version: 22
+
+      - name: The lockfile is the one npm generated
+        working-directory: web
+        run: npm ci --ignore-scripts --no-audit --no-fund

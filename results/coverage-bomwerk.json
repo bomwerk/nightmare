@@ -1,0 +1,455 @@
+{
+  "components": [
+    {
+      "confidence": "medium",
+      "coverage": "unmapped-purl-type",
+      "identity": "pkg:conan/libcurl@8.5.0",
+      "name": "libcurl",
+      "purl": "pkg:conan/libcurl@8.5.0",
+      "version": "8.5.0"
+    },
+    {
+      "confidence": "medium",
+      "coverage": "unmapped-purl-type",
+      "identity": "pkg:conan/zlib@1.3.1",
+      "name": "zlib",
+      "purl": "pkg:conan/zlib@1.3.1",
+      "version": "1.3.1"
+    },
+    {
+      "confidence": "low",
+      "coverage": "unversioned-purl",
+      "identity": "pkg:generic/cjson-prebuilt",
+      "name": "cjson-prebuilt",
+      "purl": "pkg:generic/cjson-prebuilt"
+    },
+    {
+      "confidence": "medium",
+      "coverage": "unmapped-purl-type",
+      "identity": "pkg:generic/freertos@V11.1.0",
+      "name": "freertos",
+      "purl": "pkg:generic/freertos@V11.1.0",
+      "version": "V11.1.0"
+    },
+    {
+      "confidence": "medium",
+      "coverage": "unmapped-purl-type",
+      "identity": "pkg:generic/sqlite3@3.41.2",
+      "name": "sqlite3",
+      "purl": "pkg:generic/sqlite3@3.41.2",
+      "version": "3.41.2"
+    },
+    {
+      "confidence": "low",
+      "coverage": "unversioned-purl",
+      "identity": "pkg:generic/stb",
+      "name": "stb",
+      "purl": "pkg:generic/stb"
+    },
+    {
+      "confidence": "low",
+      "coverage": "unversioned-purl",
+      "identity": "pkg:generic/uthash",
+      "name": "uthash",
+      "purl": "pkg:generic/uthash"
+    },
+    {
+      "confidence": "medium",
+      "coverage": "unmapped-purl-type",
+      "identity": "pkg:generic/zlib@1.2.11",
+      "name": "zlib",
+      "purl": "pkg:generic/zlib@1.2.11",
+      "version": "1.2.11"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:github/actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+      "name": "checkout",
+      "purl": "pkg:github/actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+      "version": "11bd71901bbe5b1630ceea73d27597364c9af683"
+    },
+    {
+      "confidence": "medium",
+      "coverage": "matched",
+      "identity": "pkg:github/actions/setup-node@v4.1.0",
+      "name": "setup-node",
+      "purl": "pkg:github/actions/setup-node@v4.1.0",
+      "version": "v4.1.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:github/leethomason/tinyxml2@1dee28e51f9175a31955b9791c74c430fe13dc82",
+      "name": "tinyxml2",
+      "purl": "pkg:github/leethomason/tinyxml2@1dee28e51f9175a31955b9791c74c430fe13dc82",
+      "version": "1dee28e51f9175a31955b9791c74c430fe13dc82"
+    },
+    {
+      "confidence": "low",
+      "coverage": "unversioned-purl",
+      "identity": "pkg:github/openssl/openssl",
+      "name": "openssl",
+      "purl": "pkg:github/openssl/openssl"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/%40isaacs/cliui@8.0.2",
+      "name": "@isaacs/cliui",
+      "purl": "pkg:npm/%40isaacs/cliui@8.0.2",
+      "version": "8.0.2"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/%40pkgjs/parseargs@0.11.0",
+      "name": "@pkgjs/parseargs",
+      "purl": "pkg:npm/%40pkgjs/parseargs@0.11.0",
+      "version": "0.11.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/ansi-regex@5.0.1",
+      "name": "ansi-regex",
+      "purl": "pkg:npm/ansi-regex@5.0.1",
+      "version": "5.0.1"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/ansi-regex@6.3.0",
+      "name": "ansi-regex",
+      "purl": "pkg:npm/ansi-regex@6.3.0",
+      "version": "6.3.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/ansi-styles@4.3.0",
+      "name": "ansi-styles",
+      "purl": "pkg:npm/ansi-styles@4.3.0",
+      "version": "4.3.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/ansi-styles@6.2.3",
+      "name": "ansi-styles",
+      "purl": "pkg:npm/ansi-styles@6.2.3",
+      "version": "6.2.3"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/balanced-match@1.0.2",
+      "name": "balanced-match",
+      "purl": "pkg:npm/balanced-match@1.0.2",
+      "version": "1.0.2"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/brace-expansion@2.1.7",
+      "name": "brace-expansion",
+      "purl": "pkg:npm/brace-expansion@2.1.7",
+      "version": "2.1.7"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/color-convert@2.0.1",
+      "name": "color-convert",
+      "purl": "pkg:npm/color-convert@2.0.1",
+      "version": "2.0.1"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/color-name@1.1.4",
+      "name": "color-name",
+      "purl": "pkg:npm/color-name@1.1.4",
+      "version": "1.1.4"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/cross-spawn@7.0.6",
+      "name": "cross-spawn",
+      "purl": "pkg:npm/cross-spawn@7.0.6",
+      "version": "7.0.6"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/debug@4.3.4",
+      "name": "debug",
+      "purl": "pkg:npm/debug@4.3.4",
+      "version": "4.3.4"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/eastasianwidth@0.2.0",
+      "name": "eastasianwidth",
+      "purl": "pkg:npm/eastasianwidth@0.2.0",
+      "version": "0.2.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/emoji-regex@8.0.0",
+      "name": "emoji-regex",
+      "purl": "pkg:npm/emoji-regex@8.0.0",
+      "version": "8.0.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/emoji-regex@9.2.2",
+      "name": "emoji-regex",
+      "purl": "pkg:npm/emoji-regex@9.2.2",
+      "version": "9.2.2"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/foreground-child@3.3.1",
+      "name": "foreground-child",
+      "purl": "pkg:npm/foreground-child@3.3.1",
+      "version": "3.3.1"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/glob@10.5.0",
+      "name": "glob",
+      "purl": "pkg:npm/glob@10.5.0",
+      "version": "10.5.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/is-fullwidth-code-point@3.0.0",
+      "name": "is-fullwidth-code-point",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
+      "version": "3.0.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/isexe@2.0.0",
+      "name": "isexe",
+      "purl": "pkg:npm/isexe@2.0.0",
+      "version": "2.0.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/jackspeak@3.4.3",
+      "name": "jackspeak",
+      "purl": "pkg:npm/jackspeak@3.4.3",
+      "version": "3.4.3"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/lru-cache@10.4.3",
+      "name": "lru-cache",
+      "purl": "pkg:npm/lru-cache@10.4.3",
+      "version": "10.4.3"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/minimatch@9.0.9",
+      "name": "minimatch",
+      "purl": "pkg:npm/minimatch@9.0.9",
+      "version": "9.0.9"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/minipass@7.1.3",
+      "name": "minipass",
+      "purl": "pkg:npm/minipass@7.1.3",
+      "version": "7.1.3"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/ms@2.1.2",
+      "name": "ms",
+      "purl": "pkg:npm/ms@2.1.2",
+      "version": "2.1.2"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/ms@2.1.3",
+      "name": "ms",
+      "purl": "pkg:npm/ms@2.1.3",
+      "version": "2.1.3"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/package-json-from-dist@1.0.1",
+      "name": "package-json-from-dist",
+      "purl": "pkg:npm/package-json-from-dist@1.0.1",
+      "version": "1.0.1"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/path-key@3.1.1",
+      "name": "path-key",
+      "purl": "pkg:npm/path-key@3.1.1",
+      "version": "3.1.1"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/path-scurry@1.11.1",
+      "name": "path-scurry",
+      "purl": "pkg:npm/path-scurry@1.11.1",
+      "version": "1.11.1"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/rimraf@5.0.5",
+      "name": "rimraf",
+      "purl": "pkg:npm/rimraf@5.0.5",
+      "version": "5.0.5"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/shebang-command@2.0.0",
+      "name": "shebang-command",
+      "purl": "pkg:npm/shebang-command@2.0.0",
+      "version": "2.0.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/shebang-regex@3.0.0",
+      "name": "shebang-regex",
+      "purl": "pkg:npm/shebang-regex@3.0.0",
+      "version": "3.0.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/signal-exit@4.1.0",
+      "name": "signal-exit",
+      "purl": "pkg:npm/signal-exit@4.1.0",
+      "version": "4.1.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/string-width-cjs@4.2.3",
+      "name": "string-width-cjs",
+      "purl": "pkg:npm/string-width-cjs@4.2.3",
+      "version": "4.2.3"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/string-width@4.2.3",
+      "name": "string-width",
+      "purl": "pkg:npm/string-width@4.2.3",
+      "version": "4.2.3"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/string-width@5.1.2",
+      "name": "string-width",
+      "purl": "pkg:npm/string-width@5.1.2",
+      "version": "5.1.2"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/strip-ansi-cjs@6.0.1",
+      "name": "strip-ansi-cjs",
+      "purl": "pkg:npm/strip-ansi-cjs@6.0.1",
+      "version": "6.0.1"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/strip-ansi@6.0.1",
+      "name": "strip-ansi",
+      "purl": "pkg:npm/strip-ansi@6.0.1",
+      "version": "6.0.1"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/strip-ansi@7.2.0",
+      "name": "strip-ansi",
+      "purl": "pkg:npm/strip-ansi@7.2.0",
+      "version": "7.2.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/which@2.0.2",
+      "name": "which",
+      "purl": "pkg:npm/which@2.0.2",
+      "version": "2.0.2"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/wrap-ansi-cjs@7.0.0",
+      "name": "wrap-ansi-cjs",
+      "purl": "pkg:npm/wrap-ansi-cjs@7.0.0",
+      "version": "7.0.0"
+    },
+    {
+      "confidence": "high",
+      "coverage": "matched",
+      "identity": "pkg:npm/wrap-ansi@8.1.0",
+      "name": "wrap-ansi",
+      "purl": "pkg:npm/wrap-ansi@8.1.0",
+      "version": "8.1.0"
+    },
+    {
+      "confidence": "low",
+      "coverage": "unversioned-purl",
+      "identity": "pkg:vcpkg/fmt",
+      "name": "fmt",
+      "purl": "pkg:vcpkg/fmt"
+    },
+    {
+      "confidence": "high",
+      "coverage": "unmapped-purl-type",
+      "identity": "pkg:vcpkg/nlohmann-json@3.11.3",
+      "name": "nlohmann-json",
+      "purl": "pkg:vcpkg/nlohmann-json@3.11.3",
+      "version": "3.11.3"
+    }
+  ],
+  "generated_at": "2025-01-01T00:00:00Z",
+  "summary": {
+    "by_class": {
+      "matched": 44,
+      "no-identifier": 0,
+      "unmapped-purl-type": 6,
+      "unversioned-purl": 5
+    },
+    "components": 55,
+    "matchable": 44,
+    "unmatched": 11
+  },
+  "tool": {
+    "name": "bomwerk",
+    "version": "0.1.0"
+  }
+}

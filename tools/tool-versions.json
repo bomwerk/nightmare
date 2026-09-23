@@ -1,0 +1,30 @@
+{
+  "_comment": [
+    "Pinned rival-tool versions for docs/RESULTS.md. compare_tools.py never reads",
+    "PATH - it resolves each tool into .tools/<name>-<version>/ and verifies sha256",
+    "before use. Upgrading a rival is a reviewable PR that visibly moves numbers.",
+    "",
+    "cdxgen has no meaningful standalone binary release; `npx --yes",
+    "@cyclonedx/cdxgen@<exact version>` pins it exactly and npm's own registry",
+    "integrity covers the download, so it carries no sha256 here."
+  ],
+  "pinned_at": "2026-09-18",
+  "tools": {
+    "syft": {
+      "version": "1.51.1",
+      "url": "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_linux_amd64.tar.gz",
+      "sha256": "8fcb33017a0dc1058298c923c436d19dfa68ae93968e0b423248542e3afb9fc3",
+      "archive_member": "syft"
+    },
+    "cdxgen": {
+      "version": "12.8.4",
+      "npm_spec": "@cyclonedx/cdxgen@12.8.4"
+    },
+    "sbom-tool": {
+      "version": "4.1.5",
+      "url": "https://github.com/microsoft/sbom-tool/releases/download/v4.1.5/sbom-tool-linux-x64",
+      "sha256": "bf5d4f99bc98c119d549d08fc02ae92598a7a42772f17317c01031a92632e05b",
+      "sha256_source": "the release's own linux-x64-manifest.spdx.json, not a separate checksums file - sbom-tool vouching for itself"
+    }
+  }
+}
