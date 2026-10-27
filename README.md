@@ -79,6 +79,12 @@ Repeat the three commands with `config-b` and a separate trace. Both CMake
 configuration and build steps must run under `observe`; configuration records the
 compiler path used by the subsequent build.
 
+A one-minute recording of these commands on this corpus, with bomwerk
+`1.0.0-rc.2`:
+
+[![bomwerk 1.0.0-rc.2 scanning, observing and trimming the nightmare
+corpus](docs/assets/bomwerk-demo-1.0.0-rc.2.jpg)](https://youtu.be/_T6Wko0zadw)
+
 ## Reproduce the comparison
 
 Build or obtain a bomwerk binary, then run:
